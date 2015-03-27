@@ -1,0 +1,323 @@
+@import 'lost.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+figure {
+  height: 48px;
+  line-height: 48px;
+  margin-top: ($gutter / 2);
+  margin-bottom: ($gutter / 2);
+  figure {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+section {
+  margin-top: $gutter;
+  margin-bottom: $gutter;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+// XS Screens
+@media only screen {
+  .xs-1 {  @include column(1/12); }
+  .xs-2 {  @include column(2/12); }
+  .xs-3 {  @include column(3/12); }
+  .xs-4 {  @include column(4/12); }
+  .xs-5 {  @include column(5/12); }
+  .xs-6 {  @include column(6/12); }
+  .xs-7 {  @include column(7/12); }
+  .xs-8 {  @include column(8/12); }
+  .xs-9 {  @include column(9/12); }
+  .xs-10 {  @include column(10/12); }
+  .xs-11 {  @include column(11/12); }
+  .xs-12 {  @include column(1); }
+
+  /* offset for phone size */
+  .xs-0-offset { margin: 0; }
+  .xs-1-offset { @include offset(1/12); }
+  .xs-2-offset { @include offset(2/12); }
+  .xs-3-offset { @include offset(3/12); }
+  .xs-4-offset { @include offset(4/12); }
+  .xs-5-offset { @include offset(5/12); }
+  .xs-6-offset { @include offset(6/12); }
+  .xs-7-offset { @include offset(7/12); }
+  .xs-8-offset { @include offset(8/12); }
+  .xs-9-offset { @include offset(9/12); }
+  .xs-10-offset { @include offset(10/12); }
+  .xs-11-offset { @include offset(11/12);}
+
+  .xs-1-push { @include move(-1/12); }
+  .xs-2-push { @include move(-2/12); }
+  .xs-3-push { @include move(-3/12); }
+  .xs-4-push { @include move(-4/12); }
+  .xs-5-push { @include move(-5/12); }
+  .xs-6-push { @include move(-6/12); }
+  .xs-7-push { @include move(-7/12); }
+  .xs-8-push { @include move(-8/12); }
+  .xs-9-push { @include move(-9/12); }
+  .xs-10-push { @include move(-10/12); }
+  .xs-11-push { @include move(-11/12); }
+
+  .xs-1-pull { @include move(1/12); }
+  .xs-2-pull { @include move(2/12); }
+  .xs-3-pull { @include move(3/12); }
+  .xs-4-pull { @include move(4/12); }
+  .xs-5-pull { @include move(5/12); }
+  .xs-6-pull { @include move(6/12); }
+  .xs-7-pull { @include move(7/12); }
+  .xs-8-pull { @include move(8/12); }
+  .xs-9-pull { @include move(9/12); }
+  .xs-10-pull { @include move(10/12); }
+  .xs-11-pull { @include move(11/12); }
+
+  .center-phone {
+    margin-left: auto;
+    margin-right:auto;
+    float:none !important;
+  }
+  .uncenter-phone {
+    margin-left: 0;
+    margin-right: 0;
+    float:left !important;
+  }
+  .uncenter-phone.right {
+    float:right !important;
+  }
+
+  [class*='fb-'].phone-reset {
+    margin-left: 0;
+    margin-right: 0;
+    left: auto;
+    right: auto;
+    float: left; }
+}
+/* Grid classes for tablet screen widths  */
+@media only screen and (min-width: 48em) {
+  .sm-1 { @include column(1/12); }
+  .sm-2 { @include column(2/12); }
+  .sm-3 { @include column(3/12); }
+  .sm-4 { @include column(4/12); }
+  .sm-5 { @include column(5/12); }
+  .sm-6 { @include column(6/12); }
+  .sm-7 { @include column(7/12); }
+  .sm-8 { @include column(8/12); }
+  .sm-9 { @include column(9/12); }
+  .sm-10 { @include column(10/12); }
+  .sm-11 { @include column(11/12); }
+  .sm-12 { @include column(1); }
+
+    /* offset for tablet screen widths */
+  .sm-0-offset { margin: 0; }
+  .sm-1-offset { @include offset(1/12); }
+  .sm-2-offset { @include offset(2/12); }
+  .sm-3-offset { @include offset(3/12); }
+  .sm-4-offset { @include offset(4/12); }
+  .sm-5-offset { @include offset(5/12); }
+  .sm-6-offset { @include offset(6/12); }
+  .sm-7-offset { @include offset(7/12); }
+  .sm-8-offset { @include offset(8/12); }
+  .sm-9-offset { @include offset(9/12); }
+  .sm-10-offset { @include offset(10/12); }
+  .sm-11-offset { @include offset(11/12);}
+
+  .sm-1-push { @include move(-1/12); }
+  .sm-2-push { @include move(-2/12); }
+  .sm-3-push { @include move(-3/12); }
+  .sm-4-push { @include move(-4/12); }
+  .sm-5-push { @include move(-5/12); }
+  .sm-6-push { @include move(-6/12); }
+  .sm-7-push { @include move(-7/12); }
+  .sm-8-push { @include move(-8/12); }
+  .sm-9-push { @include move(-9/12); }
+  .sm-10-push { @include move(-10/12); }
+  .sm-11-push { @include move(-11/12); }
+
+  .sm-1-pull { @include move(1/12); }
+  .sm-2-pull { @include move(2/12); }
+  .sm-3-pull { @include move(3/12); }
+  .sm-4-pull { @include move(4/12); }
+  .sm-5-pull { @include move(5/12); }
+  .sm-6-pull { @include move(6/12); }
+  .sm-7-pull { @include move(7/12); }
+  .sm-8-pull { @include move(8/12); }
+  .sm-9-pull { @include move(9/12); }
+  .sm-10-pull { @include move(10/12); }
+  .sm-11-pull { @include move(11/12); }
+
+  .center-tablet {
+    margin-left: auto;
+    margin-right:auto;
+    float:none !important;
+  }
+  .uncenter-tablet {
+    margin-left: 0;
+    margin-right: 0;
+    float:left !important;
+  }
+  .uncenter-tablet.right {
+    float:right !important;
+  }
+
+  [class*='fb-'].tablet-reset {
+    margin-left: 0;
+    margin-right: 0;
+    left: auto;
+    right: auto;
+    float: left; }
+}
+/* Grid classes for wide Tablet / Laptop to Small Desktop Size */
+
+@media only screen and (min-width: 62em) {
+  .md-1 { @include column(1/12); }
+  .md-2 { @include column(2/12); }
+  .md-3 { @include column(3/12); }
+  .md-4 { @include column(4/12); }
+  .md-5 { @include column(5/12); }
+  .md-6 { @include column(6/12); }
+  .md-7 { @include column(7/12); }
+  .md-8 { @include column(8/12); }
+  .md-9 { @include column(9/12); }
+  .md-10 { @include column(10/12); }
+  .md-11 { @include column(11/12); }
+  .md-12 { @include column(1); }
+
+  /* offset for tablet laptop widths */
+  .md-0-offset { margin: 0; }
+  .md-1-offset { @include offset(1/12); }
+  .md-2-offset { @include offset(2/12); }
+  .md-3-offset { @include offset(3/12); }
+  .md-4-offset { @include offset(4/12); }
+  .md-5-offset { @include offset(5/12); }
+  .md-6-offset { @include offset(6/12); }
+  .md-7-offset { @include offset(7/12); }
+  .md-8-offset { @include offset(8/12); }
+  .md-9-offset { @include offset(9/12); }
+  .md-10-offset { @include offset(10/12); }
+  .md-11-offset { @include offset(11/12);}
+
+  .md-1-push { @include move(-1/12); }
+  .md-2-push { @include move(-2/12); }
+  .md-3-push { @include move(-3/12); }
+  .md-4-push { @include move(-4/12); }
+  .md-5-push { @include move(-5/12); }
+  .md-6-push { @include move(-6/12); }
+  .md-7-push { @include move(-7/12); }
+  .md-8-push { @include move(-8/12); }
+  .md-9-push { @include move(-9/12); }
+  .md-10-push { @include move(-10/12); }
+  .md-11-push { @include move(-11/12); }
+
+  .md-1-pull { @include move(1/12); }
+  .md-2-pull { @include move(2/12); }
+  .md-3-pull { @include move(3/12); }
+  .md-4-pull { @include move(4/12); }
+  .md-5-pull { @include move(5/12); }
+  .md-6-pull { @include move(6/12); }
+  .md-7-pull { @include move(7/12); }
+  .md-8-pull { @include move(8/12); }
+  .md-9-pull { @include move(9/12); }
+  .md-10-pull { @include move(10/12); }
+  .md-11-pull { @include move(11/12); }
+
+  .center-laptop {
+    margin-left: auto;
+    margin-right:auto;
+    float:none !important;
+  }
+  .uncenter-laptop {
+    margin-left: 0;
+    margin-right: 0;
+    float:left !important;
+  }
+  .uncenter-laptop.right {
+    float:right !important;
+  }
+
+  [class*='fb-'].laptop-reset {
+    margin-left: 0;
+    margin-right: 0;
+    left: auto;
+    right: auto;
+    float: left; }
+}
+/* Grid Classes for Large Desktop Size */
+.show-desktop { display: none; }
+@media only screen and (min-width: 75em) {
+  .lg-1 { @include column(1/12); }
+  .lg-2 { @include column(2/12); }
+  .lg-3 { @include column(3/12); }
+  .lg-4 { @include column(4/12); }
+  .lg-5 { @include column(5/12); }
+  .lg-6 { @include column(6/12); }
+  .lg-7 { @include column(7/12); }
+  .lg-8 { @include column(8/12); }
+  .lg-9 { @include column(9/12); }
+  .lg-10 { @include column(10/12); }
+  .lg-11 { @include column(11/12); }
+  .lg-12 { @include column(1); }
+//Fiths
+    .fb-1-5-desktop {width: 20%;}
+  /* offset for tablet laptop widths */
+  .lg-0-offset { margin: 0; }
+  .lg-1-offset { @include offset(1/12); }
+  .lg-2-offset { @include offset(2/12); }
+  .lg-3-offset { @include offset(3/12); }
+  .lg-4-offset { @include offset(4/12); }
+  .lg-5-offset { @include offset(5/12); }
+  .lg-6-offset { @include offset(6/12); }
+  .lg-7-offset { @include offset(7/12); }
+  .lg-8-offset { @include offset(8/12); }
+  .lg-9-offset { @include offset(9/12); }
+  .lg-10-offset { @include offset(10/12); }
+  .lg-11-offset { @include offset(11/12);}
+
+  .md-1-push { @include move(-1/12); }
+  .lg-2-push { @include move(-2/12); }
+  .lg-3-push { @include move(-3/12); }
+  .lg-4-push { @include move(-4/12); }
+  .lg-5-push { @include move(-5/12); }
+  .lg-6-push { @include move(-6/12); }
+  .lg-7-push { @include move(-7/12); }
+  .lg-8-push { @include move(-8/12); }
+  .lg-9-push { @include move(-9/12); }
+  .lg-10-push { @include move(-10/12); }
+  .lg-11-push { @include move(-11/12); }
+
+  .lg-1-pull { @include move(1/12); }
+  .lg-2-pull { @include move(2/12); }
+  .lg-3-pull { @include move(3/12); }
+  .lg-4-pull { @include move(4/12); }
+  .lg-5-pull { @include move(5/12); }
+  .lg-6-pull { @include move(6/12); }
+  .lg-7-pull { @include move(7/12); }
+  .lg-8-pull { @include move(8/12); }
+  .lg-9-pull { @include move(9/12); }
+  .lg-10-pull { @include move(10/12); }
+  .lg-11-pull { @include move(11/12); }
+
+  .lgCenter {
+    margin-left: auto;
+    margin-right:auto;
+    float:none !important;
+    text-align: center;
+  }
+  .lgUnCenter {
+    margin-left: 0;
+    margin-right: 0;
+    float:left !important;
+  }
+  .lgUnCenter.right {
+    float:right !important;
+  }
+
+  
+}
+}
+ 

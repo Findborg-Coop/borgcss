@@ -1,0 +1,313 @@
+html {
+  overflow: hidden;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y; }
+// Type
+ button, input, select, textarea, pre { margin: 0; }
+h1, h2, h3, h4, h5, h6, p, dl, ol, ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+button, input, select, textarea { font-family: inherit; font-size: 100%; }
+article, aside, details, figcaption, figure, footer, header, main, nav, section, summary { display: block; }
+html,body {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+body, .borgApp {
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font-size: 0.875rem; 
+  color: rgba(red(@text-color), green(@text-color), blue(@text-color), @text-color-opacity);
+  font-weight: @base-font-weight;
+  word-wrap: break-word;
+   -webkit-text-size-adjust:100%;
+  font-family: "robotoregular", sans-serif;
+  line-height: 1.5rem;
+  text-rendering: optimizeLegibility;
+  -webkit-backface-visibility: hidden;
+  -webkit-user-drag: none; 
+}
+.content {
+  position: relative; }
+
+.scrollContent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  margin-top: -1px;
+  padding-top: 1px;
+  width: auto;
+  height: auto; }
+
+.overflowScroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute; }
+  .overflow-scroll .scroll {
+    position: static;
+    height: 100%;
+    -webkit-transform: translate3d(0, 0, 0); }
+.pane {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  z-index: 1; }
+
+.view {
+  z-index: 1; }
+
+.pane, .view {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  overflow: hidden; }
+
+
+
+
+* { 
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+    -webkit-touch-callout:none;
+}
+body.antialiased-always {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@media only screen and (min-device-pixel-ratio: 1.5) {
+  body.antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+//Fixed Typography for total control
+.display4{
+     font-family: "robotolight";
+    color: rgba(red(@text-color), green(@text-color), blue(@text-color), @alternate-text-color-opacity);
+    font-size: 7rem;
+    font-weight: lighter;
+    white-space: nowrap;
+    letter-spacing: -0.01em;
+    line-height: 7.01rem;
+}
+.display3{
+    font-family: 'robotoregular';
+    color: rgba(red(@text-color), green(@text-color), blue(@text-color), @alternate-text-color-opacity);
+    font-size: 3.5rem;
+    letter-spacing: -0.005em;
+    white-space: nowrap;
+    line-height:3.6rem;
+}
+.display2 {
+  font: 2.8125rem 'robotoregular';
+  color: rgba(red(@text-color), green(@text-color), blue(@text-color), @alternate-text-color-opacity);
+  letter-spacing: normal;
+  line-height: 2.8225rem;
+}
+.display1{
+    font-family: 'robotoregular';
+    color: rgba(red(@text-color), green(@text-color), blue(@text-color), @alternate-text-color-opacity);
+    font-size: 2.125rem;
+    letter-spacing: normal;
+}
+.headline{
+    font-family: 'robotoregular';
+    color: rgba(red(@text-color), green(@text-color), blue(@text-color), @text-color-opacity);
+    font-size: 1.5rem;
+    letter-spacing: normal;
+}
+.title{
+    color: rgba(red(@text-color), green(@text-color), blue(@text-color), @text-color-opacity);
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: 0.005em;
+}
+.subHead{
+    font-family: 'robotomedium';
+    color: rgba(red(@text-color), green(@text-color), blue(@text-color), @text-color-opacity);
+    font-size: 0.9375rem;
+    letter-spacing: 0.01em;
+   
+      font-size: 1rem;
+}
+.body2{
+    color: rgba(red(@text-color), green(@text-color), blue(@text-color), @text-color-opacity);
+    font-size: 0.875rem;
+    
+}
+.body1{
+    color: rgba(red(@text-color), green(@text-color), blue(@text-color), @text-color-opacity);
+    font-size: 0.8125rem;
+   
+}
+.caption{
+    color: rgba(red(@text-color), green(@text-color), blue(@text-color), @alternate-text-color-opacity);
+    font-size: 0.75rem;
+  letter-spacing: 0.02em;
+   
+}
+.menuText{
+    color: rgba(red(@text-color), green(@text-color), blue(@text-color), @text-color-opacity);
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+   
+}
+.buttonText{
+    color: rgba(red(@text-color), green(@text-color), blue(@text-color), @text-color-opacity);
+    font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+   
+}
+
+//End of Fixed Typography
+//Note that the although I say fixed it still adjusts to screen sizes
+a, input, textarea, select {
+    outline: 0;
+}
+
+//General Typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  
+  line-height: 1.25;
+  margin-top: 1em;
+  margin-bottom: .5em;
+}
+h1,
+.h1 {
+	font-family: "robotolight";
+    color: rgba(red(@text-color), green(@text-color), blue(@text-color), @alternate-text-color-opacity);
+    font-weight: 300;
+  	font-size: 2rem;
+}
+
+h2,
+.h2 {
+	font-family: 'robotoregular';
+  	color: rgba(red(@text-color), green(@text-color), blue(@text-color), @alternate-text-color-opacity);
+    font-weight: 400;
+  	font-size: 1.5rem;
+}
+
+h3, 
+.h3, {
+	font-family: 'robotoregular';
+ 	color: rgba(red(@text-color), green(@text-color), blue(@text-color), @alternate-text-color-opacity);
+  font-weight: 400;
+ 	font-size: 1.25rem;
+}
+
+h4,
+.h4 {
+	font-family: 'robotoregular';
+    color: rgba(red(@text-color), green(@text-color), blue(@text-color), @text-color-opacity);
+ 	font-weight: 400;
+  font-size: 1rem;
+}
+
+h5,
+.h5 {
+font-family: "robotothin";
+  font-size: .875rem;
+ }
+
+h6,
+.h6 {
+  font-size: .75rem;
+}
+.h1 .small, .h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small {
+font-size: 65%;
+}
+
+// Responsive Headers & text
+
+.f1 {
+    font-size:4rem
+}
+
+.f2 {
+    font-size:2.25rem
+}
+
+@media (min-width:52em) {
+.f1Flex {
+    font-size:8vw
+}
+
+.f2Flex {
+    font-size:5vw
+}
+
+.f3Flex {
+    font-size:4vw
+}
+.tFlex {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:96em) {
+.f1Flex {
+    font-size:7.68rem
+}
+
+.f2Flex {
+    font-size:4.8rem
+}
+
+.f3Flex {
+    font-size:3.84rem
+}
+}
+
+//Some extra fonts
+.monospace {
+    font-family:'Source Code Pro',Consolas,monospace
+}
+
+.helvetica {
+    font-family:'Helvetica Neue',Helvetica,sans-serif
+}
+
+small, .small {
+  font-family: "robotothin";
+  font-size: .875rem;
+  line-height: 1.5rem;
+}
+code {
+  font-family: Consolas, Menlo, monospace;
+  display: inline-block;
+  padding: 1em;
+  font-size: 0.9em;
+  line-height: 1.5em;
+  font-weight: 400;
+}

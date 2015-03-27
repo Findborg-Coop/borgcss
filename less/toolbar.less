@@ -1,0 +1,176 @@
+
+/* Toolbar for phone screen widths  */
+@media only screen {
+.tBar {
+  height: 48px;
+}
+.hastBar{
+  margin-top:48px;
+}
+  .tBar.mediumTall {
+  height: 96px;
+}
+.hastBar.medium{
+  margin-top:96px;
+}
+.tBar.tall {
+  height: 154px;
+}
+.hastBar.tall{
+  margin-top:154px;
+}
+}
+/* Tbar classes for tablet screen widths  */
+@media only screen and (min-width: 48em) {
+.tBar{
+    /* size */
+      height: 56px;
+     /* typography */
+       font-size: 1.3em;
+    
+       }
+       .hastBar{
+  margin-top:56px;
+}
+.tBar.mediumTall {
+  height: 112px;
+}
+
+.tBar.tall {
+  height: 164px;
+
+}
+}
+/* Tbar classes for wide Tablet / Laptop to Small Desktop Size */
+
+@media only screen and (min-width: 62em) {
+/* size */
+.tBar{
+  height: 64px;
+  /* typography */
+  font-size: 1.3em;
+  line-height:1.3em;
+  
+}
+.hastBar{
+  margin-top:64px;
+}
+  .tBar.mediumTall {
+  height: 128px;
+}
+
+.tBar.tall {
+  height: 192px;
+}
+}
+
+
+
+/* Tbar Classes for Large Desktop Size */
+@media only screen and (min-width: 75em) {
+/* size */
+.tBar{
+/* technical */
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  
+  z-index: 5;
+  height: 64px;
+  /* typography */
+  font-size: 1.3em;
+  
+  }
+  .hastBar{
+  margin-top:64px;
+}
+  .tBar.mediumTall {
+  height: 128px;
+}
+
+.tBar.tall {
+  height: 192px;
+}
+
+.toolbarTools {
+  position: relative;
+  height: 64px;
+  padding: 0 8px;
+  
+}
+}
+
+
+
+
+.tBar.animate {
+  /* transition */
+  transition: height 0.18s ease-in;
+}
+polyfill-next-selector { content: '.tbar.core-narrow.mediumTall, .core-narrow .tBar.mediumTall'; }
+.tbar(.core-narrow.medium-tall),
+.tbar-context(.core-narrow).tbar(.medium-tall) {
+  height: 112px;
+}
+
+polyfill-next-selector { content: '.tbar.core-narrow.tall, .core-narrow .tbar.tall'; }
+.tbar(.core-narrow.tall),
+.tbar-context(.core-narrow).tBar(.tall) {
+  height: 168px;
+}
+
+polyfill-next-selector { content: '.tBar.core-narrow .toolbarTools, .core-narrow .tBar .toolbarTools'; }
+.tBar(.core-narrow) .toolbarTools,
+.tBar-context(.core-narrow) .toolbarTools {
+  height: 56px;
+  padding: 0;
+}
+
+/* middle bar */
+#middleBar {
+position: relative;
+ 
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+
+/* bottom bar */
+#bottomBar {
+position: absolute;
+  
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* make elements (e.g. buttons) respond to mouse/touch events */
+polyfill-next-selector { content: '.toolbarTools > *'; }
+::content > * {
+  pointer-events: auto;
+}
+
+/* elements spacing */
+polyfill-next-selector { content: '.toolbarTools > *'; }
+::content > * {
+  margin: 0 8px;
+}
+
+/* misc helpers */
+polyfill-next-selector { content: '.toolbarTools > .fit'; }
+::content > .fit {
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  margin: 0;
+}
+
+polyfill-next-selector { content: '.tBar .indent'; }
+::content > .indent {
+  margin-left: 60px;
+}

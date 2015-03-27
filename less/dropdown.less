@@ -1,0 +1,115 @@
+.related .drop {
+  visibility: hidden;
+  opacity: 0;
+}
+.related .drop a.list-item:hover {
+  background-color: #eee;
+}
+.related:hover .drop {
+  visibility: visible;
+  opacity: 1;
+}
+.drop {
+  position: absolute;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  z-index: 11;
+}
+.drop.up {
+  bottom: 0;
+  top: auto;
+}
+.drop.up.max {
+  width: 100%;
+}
+.drop.up-left {
+  top: auto;
+  bottom: 100%;
+  left: 0;
+  right: auto;
+}
+.drop.up-left.max {
+  width: 100%;
+}
+.drop.up-right {
+  top: auto;
+  bottom: 100%;
+  right: 0;
+  left: auto;
+}
+.drop.up-right.max {
+  width: 100%;
+}
+.drop.down {
+  top: 0;
+  bottom: auto;
+}
+.drop.down.max {
+  width: 100%;
+}
+.drop.down-left {
+  top: 100%;
+  bottom: auto;
+  left: 0;
+  right: auto;
+}
+.drop.down-left.max {
+  width: 100%;
+}
+.drop.down-right {
+  top: 100%;
+  bottom: auto;
+  right: 0;
+  left: auto;
+}
+.drop.down-right.max {
+  width: 100%;
+}
+.drop.left {
+  left: 0;
+  right: auto;
+}
+.drop.left-down {
+  left: auto;
+  right: 100%;
+  top: 0;
+  bottom: auto;
+}
+.drop.left-down.max {
+  width: 100%;
+}
+.drop.left-up {
+  left: auto;
+  right: 100%;
+  bottom: 0;
+  top: auto;
+}
+.drop.left-up.max {
+  width: 100%;
+}
+.drop.right {
+  right: 0;
+  left: auto;
+}
+.drop.right-down {
+  right: auto;
+  left: 100%;
+  top: 0;
+  bottom: auto;
+}
+.drop.right-down.max {
+  width: 100%;
+}
+.drop.right-up {
+  right: auto;
+  left: 100%;
+  bottom: 0;
+  top: auto;
+}
+.drop.right-up.max {
+  width: 100%;
+}
+
